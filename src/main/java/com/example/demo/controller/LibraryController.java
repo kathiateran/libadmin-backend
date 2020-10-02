@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Book;
 import com.example.demo.repository.*;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*", AccessControlAllowOrigin= *)
+@CrossOrigin(origins = "*", allowedHeaders = "*", AccessControlAllowOrigin= "*")
 @RestController
 @RequestMapping("/api")
 
