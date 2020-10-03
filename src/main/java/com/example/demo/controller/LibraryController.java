@@ -24,8 +24,17 @@ import com.example.demo.repository.*;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api")
-
 public class LibraryController {
+	
+	@Bean
+    	public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("*");
+            }
+       	 }
+    	}
 
 	@Autowired
 	LibraryRepository libraryRepository;
